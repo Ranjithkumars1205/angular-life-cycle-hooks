@@ -1,0 +1,20 @@
+<div style="background-color: cornflowerblue;">
+  <p>child works!</p>
+  <button (click)="OnCounter()">Child Counter {{childCounter}}</button>
+
+<p>data coming from parent- {{parentData}}</p>
+
+<p>
+  Author data: <br>
+  id : {{authors?.id}} <br>
+  name: {{authors?.name}}
+</p>
+
+
+<!-- Dynamic data -->
+<!-- If you want to pass the HTML content to child component from parent componet, you can use ng-content,
+this is called Content Projection -->
+<ng-content></ng-content>
+</div>
+
+

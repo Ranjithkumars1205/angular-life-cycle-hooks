@@ -1,0 +1,23 @@
+<p>parent works!</p>
+
+<!-- ElementRef for ngAfterViewInit -->
+<!-- this button also child for this component html -->
+<button (click)="counter()" #btnCounter>Button</button>
+
+
+<lch-child [parentData]="count" [pData_2]="testFlag" [authors]="obj">
+  <!-- How do we know about below template has been initialized ?
+       go to child component in the ngAfterContentInit and ngAfterContentChecked -->
+  <p>This is ng-content data</p>
+</lch-child>
+
+<hr>
+<!-- ng-content is very usefull for passing data to nested child -->
+<lch-child [parentData]="count" [pData_2]="testFlag" [authors]="obj">
+  <button>ngContent-button</button>
+  <lch-nested-child [parentData]="forNestedChild"></lch-nested-child>
+</lch-child>
+
+
+
+
